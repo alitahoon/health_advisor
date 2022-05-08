@@ -13,14 +13,14 @@
         android:layout_height="match_parent"
         android:layout_weight="0.1"
         android:background="@drawable/home_laout_style"
-        android:orientation="vertical"
-        android:padding="@dimen/main_padding">
+        android:orientation="vertical">
 
         <TextView
+            android:layout_marginTop="@dimen/main_margin"
+            android:layout_marginHorizontal="@dimen/main_margin"
             android:id="@+id/main_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.01"
             android:paddingLeft="@dimen/main_padding"
             android:text="@string/title_home_page"
             android:textColor="@color/black"
@@ -28,10 +28,10 @@
             android:textStyle="bold" />
 
         <TextView
+            android:layout_marginHorizontal="@dimen/main_margin"
             android:id="@+id/para_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.01"
             android:paddingLeft="@dimen/main_padding"
             android:text="@string/para_home_page"
             android:textColor="@color/black"
@@ -41,11 +41,9 @@
             android:id="@+id/categories_fr_container"
             android:name="com.example.aklny.categories_fragment"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/main_margin"
-            android:layout_marginBottom="@dimen/main_margin"
-            android:layout_weight="1"
-            android:padding="@dimen/main_padding"></FrameLayout>
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/main_margin"
+            android:paddingHorizontal="@dimen/main_padding"></FrameLayout>
 
     </LinearLayout>
 

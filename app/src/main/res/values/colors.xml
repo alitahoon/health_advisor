@@ -9,9 +9,12 @@
     <color name="light_white">#848484</color>
     <color name="white">#FFFFFFFF</color>
     <color name="basic_color">#402C4F</color>
-    <color name="non_basic">#E9DDF3</color>
+    <color name="non_basic">#C074F9</color>
+    <color name="primery">#E9D5DA</color>
     <color name="first_card">#FFF2B0</color>
     <color name="second_card">#FAE6E5</color>
     <color name="third_card">#FEC7CA</color>
     <color name="fourth_card">#F6C1C1</color>
+    <color name="rateColor">#FFAA00</color>
+    <color name="meals_card">#E9D5DA</color>
 </resources>

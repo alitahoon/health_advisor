@@ -5,17 +5,25 @@ import java.io.Serializable;
 
 public class meal implements Serializable {
     private String name;
-    private String component;
     private String categorie;
+    private int img;
     private int rate;
     private String details;
 
-    public meal(String name, String component, String categorie, int rate, String details) {
+    public meal(String name,String categorie, int rate, String details,int img) {
         this.name = name;
-        this.component = component;
         this.categorie = categorie;
         this.rate = rate;
         this.details = details;
+        this.img=img;
+    }
+
+    public int getImg() {
+        return img;
+    }
+
+    public void setImg(int img) {
+        this.img = img;
     }
 
     public String getName() {
@@ -24,14 +32,6 @@ public class meal implements Serializable {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getComponent() {
-        return component;
-    }
-
-    public void setComponent(String component) {
-        this.component = component;
     }
 
     public String getCategorie() {

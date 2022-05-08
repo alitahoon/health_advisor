@@ -10,8 +10,10 @@
         <entry key="..\:/Users/Ali Tahoon/AndroidStudioProjects/health_advisor/app/src/main/res/drawable/card2_style.xml" value="0.246" />
         <entry key="..\:/Users/Ali Tahoon/AndroidStudioProjects/health_advisor/app/src/main/res/drawable/card3_style.xml" value="0.246" />
         <entry key="..\:/Users/Ali Tahoon/AndroidStudioProjects/health_advisor/app/src/main/res/drawable/card4_style.xml" value="0.246" />
+        <entry key="..\:/Users/Ali Tahoon/AndroidStudioProjects/health_advisor/app/src/main/res/drawable/card_meals_style.xml" value="0.246" />
         <entry key="..\:/Users/Ali Tahoon/AndroidStudioProjects/health_advisor/app/src/main/res/drawable/home_laout_style.xml" value="0.246" />
         <entry key="..\:/Users/Ali Tahoon/AndroidStudioProjects/health_advisor/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.246" />
+        <entry key="..\:/Users/Ali Tahoon/AndroidStudioProjects/health_advisor/app/src/main/res/drawable/ic_categorie.xml" value="0.247" />
         <entry key="..\:/Users/Ali Tahoon/AndroidStudioProjects/health_advisor/app/src/main/res/drawable/ic_empty.xml" value="0.246" />
         <entry key="..\:/Users/Ali Tahoon/AndroidStudioProjects/health_advisor/app/src/main/res/drawable/ic_favorite.xml" value="0.246" />
         <entry key="..\:/Users/Ali Tahoon/AndroidStudioProjects/health_advisor/app/src/main/res/drawable/ic_healthy.xml" value="0.168" />
@@ -23,6 +25,8 @@
         <entry key="..\:/Users/Ali Tahoon/AndroidStudioProjects/health_advisor/app/src/main/res/layout/fragment_categorios_fragment.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/Ali Tahoon/AndroidStudioProjects/health_advisor/app/src/main/res/layout/fragment_meals_empty_fragment.xml" value="0.21052631578947367" />
         <entry key="..\:/Users/Ali Tahoon/AndroidStudioProjects/health_advisor/app/src/main/res/layout/fragment_meals_fragment.xml" value="0.21052631578947367" />
+        <entry key="..\:/Users/Ali Tahoon/AndroidStudioProjects/health_advisor/app/src/main/res/layout/fragment_non_empty_meal.xml" value="0.21052631578947367" />
+        <entry key="..\:/Users/Ali Tahoon/AndroidStudioProjects/health_advisor/app/src/main/res/layout/meals_layout.xml" value="0.33" />
         <entry key="..\:/Users/Ali Tahoon/AndroidStudioProjects/health_advisor/app/src/main/res/menu/main_menu.xml" value="0.22" />
       </map>
     </option>

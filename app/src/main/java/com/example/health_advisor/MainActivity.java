@@ -1,24 +1,27 @@
 package com.example.health_advisor;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import java.util.zip.Inflater;
 
 public class MainActivity extends AppCompatActivity {
     ImageView btn_main_favorite,btn_main_home,btn_main_profile;
     TextView main_txt,para_txt;
+    Animation anim;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,11 +59,14 @@ public class MainActivity extends AppCompatActivity {
                 btn_main_home.setImageResource(R.drawable.ic_home);
                 main_txt.setVisibility(View.GONE);
                 para_txt.setVisibility(View.GONE);
+                actionBar.setTitle("Favourites");
                 //bring fragment
                 FragmentManager fm= getSupportFragmentManager();
                 FragmentTransaction ft=fm.beginTransaction();
-                meals_empty_fragment f=new meals_empty_fragment();
-                ft.replace(R.id.categories_fr_container,f);
+                //add animation to the fragment
+                ft.setCustomAnimations(R.anim.slide_in_left,R.anim.slide_out_right);
+                non_empty_meal mef=new non_empty_meal();
+                ft.replace(R.id.categories_fr_container,mef);
                 ft.commit();
             }
         });
@@ -74,9 +80,15 @@ public class MainActivity extends AppCompatActivity {
                 btn_main_home.setImageResource(R.drawable.ic_home_pressed);
                 main_txt.setVisibility(View.VISIBLE);
                 para_txt.setVisibility(View.VISIBLE);
+                //prepare text animation
+                anim=AnimationUtils.loadAnimation(getApplicationContext(),R.anim.scal);
+                main_txt.startAnimation(anim);
+                para_txt.setAnimation(anim);
+                actionBar.setTitle("Categories");
                 //bring fragment
                 FragmentManager fm= getSupportFragmentManager();
                 FragmentTransaction ft=fm.beginTransaction();
+                ft.setCustomAnimations(R.anim.slide_in_right,R.anim.slide_out_left);
                 categorios_fragment f=new categorios_fragment();
                 ft.replace(R.id.categories_fr_container,f);
                 ft.commit();
@@ -86,9 +98,15 @@ public class MainActivity extends AppCompatActivity {
     //change menu to the menu that we had created
 
     @Override
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menu_inflater=getMenuInflater();
         menu_inflater.inflate(R.menu.main_menu,menu);
         return true;
     }
+
 }

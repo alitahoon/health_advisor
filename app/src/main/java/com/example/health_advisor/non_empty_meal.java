@@ -6,26 +6,37 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.zip.Inflater;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link meals_empty_fragment#newInstance} factory method to
+ * Use the {@link non_empty_meal#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class meals_empty_fragment extends Fragment {
+public class non_empty_meal extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
+    RecyclerView RCV_meals;
+    ArrayList<meal> meals=new ArrayList<meal>();
+    TextView main_txt;
+    Animation anim;
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
-    public meals_empty_fragment() {
+    public non_empty_meal() {
         // Required empty public constructor
     }
 
@@ -35,11 +46,11 @@ public class meals_empty_fragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment meals_fragment.
+     * @return A new instance of fragment non_empty_meal.
      */
     // TODO: Rename and change types and number of parameters
-    public static meals_empty_fragment newInstance(String param1, String param2) {
-        meals_empty_fragment fragment = new meals_empty_fragment();
+    public static non_empty_meal newInstance(String param1, String param2) {
+        non_empty_meal fragment = new non_empty_meal();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -60,6 +71,26 @@ public class meals_empty_fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_meals_empty_fragment, container, false);
+        View v= inflater.inflate(R.layout.fragment_non_empty_meal, container, false);
+        RCV_meals=v.findViewById(R.id.RCV_meals);
+        main_txt=v.findViewById(R.id.main_text_fav);
+        for (int i=0;i<100;i++)
+        {
+            meals.add(new meal("meal1","diabits",3,"Koshary is Read More.."
+                    ,R.drawable.koshery));
+        }
+        meals_adapter newAdapter=new meals_adapter(meals);
+        RCV_meals.setHasFixedSize(true);
+        RCV_meals.setAdapter(newAdapter);
+        anim= AnimationUtils.loadAnimation(getContext(),R.anim.scal);
+        RCV_meals.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+//                main_txt.startAnimation(anim);
+                main_txt.setVisibility(View.GONE);
+                return false;
+            }
+        });
+        return v;
     }
 }
