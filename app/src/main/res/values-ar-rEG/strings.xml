@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">المرشد الصحي</string>
+    <string name="title_home_page">الاكل الصحي</string>
+    <string name="para_home_page">"خطط وجباتنا الصحية اليومية "</string>
+    <string name="diabetics_food">أكل مرضي السكري</string>
+    <string name="fitness_food">اكل اللياقه</string>
+    <string name="diet_food">اكل لانقاص الوزن</string>
+    <string name="hypertensives_food">أكل مرضي الضغط</string>
+    <string name="search_icone">ابحث</string>
+    <string name="my_favourite_title">تفضيلاتي</string>
+    <string name="my_favourite_para1">!المفضلات فارغه</string>
+    <string name="my_favourite_para2">قم باضافه بعض الاطعمه الي المفضله لاظهارهم هنا</string>
+
+</resources>

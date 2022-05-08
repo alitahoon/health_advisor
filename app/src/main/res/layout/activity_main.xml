@@ -17,7 +17,7 @@
         android:padding="@dimen/main_padding">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/main_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"
@@ -28,7 +28,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/para_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"
@@ -58,21 +58,21 @@
         android:padding="@dimen/main_padding">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/btn_main_favorite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             app:srcCompat="@drawable/ic_favorite" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/btn_main_home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             app:srcCompat="@drawable/ic_home" />
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/btn_main_profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

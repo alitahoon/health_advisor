@@ -7,4 +7,8 @@
     <string name="diet_food">Diet Food</string>
     <string name="hypertensives_food">Hypertensive Food</string>
     <string name="search_icone">Search</string>
+    <string name="my_favourite_title">My Favourits</string>
+    <string name="my_favourite_para1">Your favourites list is empty!</string>
+    <string name="my_favourite_para2">Explore food dishes and add them to favourite to show them here</string>
+    <!-- TODO: Remove or change this placeholder text -->
 </resources>
