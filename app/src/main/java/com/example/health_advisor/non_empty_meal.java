@@ -83,14 +83,14 @@ public class non_empty_meal extends Fragment {
         RCV_meals.setHasFixedSize(true);
         RCV_meals.setAdapter(newAdapter);
         anim= AnimationUtils.loadAnimation(getContext(),R.anim.scal);
-        RCV_meals.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-//                main_txt.startAnimation(anim);
-                main_txt.setVisibility(View.GONE);
-                return false;
-            }
-        });
+//        RCV_meals.setOnTouchListener(new View.OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View view, MotionEvent motionEvent) {
+////                main_txt.startAnimation(anim);
+//                main_txt.setVisibility(View.GONE);
+//                return false;
+//            }
+//        });
         return v;
     }
 }

@@ -23,15 +23,15 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_weight="1"
-            android:background="@drawable/card1_style"
             app:cardCornerRadius="50dp"
             app:cardElevation="8dp"
             app:cardMaxElevation="1dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
+                android:id="@+id/btn_categoriy_diabits"
                 android:layout_height="match_parent"
-                android:background="@drawable/card1_style"
+                android:background="@color/first_card"
                 android:orientation="vertical"
                 android:padding="10dp">
 
@@ -50,7 +50,7 @@
                     android:layout_weight="0.01"
                     android:gravity="center"
                     android:text="@string/diabetics_food"
-                    android:textColor="@color/black"
+                    android:textColor="@color/basic_color"
                     android:textSize="12sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -68,9 +68,10 @@
             app:cardMaxElevation="1dp">
 
             <LinearLayout
+                android:id="@+id/btn_categoriy_Hypertunsive"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/card2_style"
+                android:background="@color/second_card"
                 android:orientation="vertical"
                 android:padding="10dp">
 
@@ -88,7 +89,7 @@
                     android:layout_weight="0.01"
                     android:gravity="center"
                     android:text="@string/hypertensives_food"
-                    android:textColor="@color/black"
+                    android:textColor="@color/basic_color"
                     android:textSize="12sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -118,9 +119,10 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/card3_style"
+                android:background="@color/third_card"
                 android:orientation="vertical"
-                android:padding="10dp">
+                android:padding="10dp"
+                android:id="@+id/btn_categoriy_fitness">
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -136,7 +138,7 @@
                     android:layout_weight="0.01"
                     android:gravity="center"
                     android:text="@string/fitness_food"
-                    android:textColor="@color/black"
+                    android:textColor="@color/basic_color"
                     android:textSize="12sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -156,9 +158,10 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/card4_style"
+                android:background="@color/fourth_card"
                 android:orientation="vertical"
-                android:padding="10dp">
+                android:padding="10dp"
+                android:id="@+id/btn_categoriy_diet">
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -174,7 +177,7 @@
                     android:layout_weight="0.01"
                     android:gravity="center"
                     android:text="@string/diet_food"
-                    android:textColor="@color/black"
+                    android:textColor="@color/basic_color"
                     android:textSize="12sp"
                     android:textStyle="bold" />
             </LinearLayout>

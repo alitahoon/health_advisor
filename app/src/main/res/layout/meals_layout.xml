@@ -11,7 +11,9 @@
         android:elevation="8dp"
         android:background="@color/meals_card"
         app:cardCornerRadius="100dp"
-        android:layout_marginTop="@dimen/main_margin"
+        android:layout_margin="@dimen/main_margin"
+        app:cardElevation="8dp"
+
         >
        <LinearLayout
            android:background="@color/meals_card"

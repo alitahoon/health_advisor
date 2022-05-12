@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/basic_color"
     android:orientation="vertical"
+    android:id="@+id/main_activity"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -16,25 +17,25 @@
         android:orientation="vertical">
 
         <TextView
-            android:layout_marginTop="@dimen/main_margin"
-            android:layout_marginHorizontal="@dimen/main_margin"
             android:id="@+id/main_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/main_margin"
+            android:layout_marginTop="@dimen/main_margin"
             android:paddingLeft="@dimen/main_padding"
             android:text="@string/title_home_page"
-            android:textColor="@color/black"
+            android:textColor="@color/basic_color"
             android:textSize="28sp"
             android:textStyle="bold" />
 
         <TextView
-            android:layout_marginHorizontal="@dimen/main_margin"
             android:id="@+id/para_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/main_margin"
             android:paddingLeft="@dimen/main_padding"
             android:text="@string/para_home_page"
-            android:textColor="@color/black"
+            android:textColor="@color/basic_color"
             android:textSize="15sp" />
 
         <FrameLayout
@@ -48,6 +49,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/main_footer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"

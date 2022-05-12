@@ -1,12 +1,20 @@
 package com.example.health_advisor;
 
+import android.content.Context;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.Toast;
+
+import com.airbnb.lottie.LottieAnimationView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,7 +22,12 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class categorios_fragment extends Fragment {
-
+    private onFragmentClicklistener listener;
+    LinearLayout btn_cat_diabits;
+    LinearLayout btn_cat_hypertensive;
+    LinearLayout btn_cat_fitness;
+    LinearLayout btn_cat_diet;
+    String Clickedcategorie="null";
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -53,12 +66,63 @@ public class categorios_fragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        if (context instanceof onFragmentClicklistener)
+            listener=(onFragmentClicklistener) context;
+        else
+            throw new ClassCastException("your activity doesn't implement onFragmentClicklistener !!");
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        listener=null;
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_categorios_fragment, container, false);
+        View v= inflater.inflate(R.layout.fragment_categorios_fragment, container, false);
+        View RCV_item_layout= inflater.inflate(R.layout.categorie_content_layout, container, false);
+        btn_cat_diabits=v.findViewById(R.id.btn_categoriy_diabits);
+        btn_cat_fitness=v.findViewById(R.id.btn_categoriy_fitness);
+        btn_cat_hypertensive=v.findViewById(R.id.btn_categoriy_Hypertunsive);
+        btn_cat_diet= v.findViewById(R.id.btn_categoriy_diet);
+        btn_cat_diabits.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listener.onFragmentItemClick("diabits_categorie");
+            }
+        });
+        btn_cat_fitness.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listener.onFragmentItemClick("fitness_categorie");
+            }
+        });
+        btn_cat_hypertensive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listener.onFragmentItemClick("hypertensive_categorie");
+            }
+        });
+        btn_cat_diet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listener.onFragmentItemClick("diet_categorie");
+            }
+        });
+        return v;
+    }
+
+    //create listener to send the name of clicked categorie to the main actvity
+    public interface onFragmentClicklistener{
+        void onFragmentItemClick(String Clickedcategorie);
     }
 }
