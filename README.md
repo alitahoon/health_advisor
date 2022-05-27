@@ -36,3 +36,7 @@ Diet Food Page
 Fitness Food Page
 
 ![fitness food](https://user-images.githubusercontent.com/73113143/170715866-77899afc-b302-40da-aa21-878f0e0b31f8.jpg)
+
+Details Page
+
+![Details](https://user-images.githubusercontent.com/73113143/170718241-22e0d65a-2f63-4151-8464-24165afa1d21.jpg)
