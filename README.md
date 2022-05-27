@@ -17,9 +17,9 @@ Favourite Page
 
 ![favourite](https://user-images.githubusercontent.com/73113143/170715819-dd1fbb97-bc83-43ec-9294-845261982607.jpg)
 
-Profile  Page 
+Profile Page 
 
-![profile](https://user-images.githubusercontent.com/73113143/170715831-5b449173-8a6d-45cd-b976-8b7dc80f5a90.jpg)
+![profile](https://user-images.githubusercontent.com/73113143/170717492-8619aa13-5cf7-479e-a52d-715e14b7857e.jpg)
 
 Hypertensive Food Page
 
